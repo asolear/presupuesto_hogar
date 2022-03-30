@@ -94,6 +94,50 @@
         <div class="row">
           <div class="col-md-5">
             <h1>Contactanos:</h1>
+
+
+            <div class="form-floating">
+              <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <option selected value="1">No lo se</option>
+                <option value="2">100 a 200</option>
+                <option value="3">200 a 300</option>
+                <option value="4">200</option>
+              </select>
+              <label for="floatingSelect">Consumo Mensual (kWh)</label>
+            </div>
+            <div class="form-floating">
+              <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <option selected>1</option>
+                <option value="1">1 a 2</option>
+                <option value="2">2 a 3</option>
+                <option value="3">3 a 4</option>
+              </select>
+              <label for="floatingSelect">Potencia  contratada (kW)</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">🚗 Vehículo eléctrico</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+              <label class="form-check-label" for="flexSwitchCheckChecked">❄ Incorporación de equipos de aire
+                acondicionado</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled">
+              <label class="form-check-label" for="flexSwitchCheckDisabled">☀ Demanda de calor con
+                bomba de calor</label>
+            </div>
+
+
+
+
+
+
+
+
+
+
             <label for="exampleFormControlInput1" class="form-label">Asunto </label>
             <select class="form-control" type="select" name="asunto" id="asunto">
               <option value="Atencion al cliente">Atencion al cliente</option>
@@ -102,22 +146,7 @@
               <option value="Otro">Otro</option>
             </select>
             <br>
-            <input name='jaja' type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3" value="24"
-              oninput="this.nextElementSibling.value = this.value">
-            <output>24</output> <label for="customRange3" class="form-label">💡 Example range</label>
 
-            <input name='js' type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3" value="24"
-              oninput="this.nextElementSibling.value = this.value">
-            <output>24</output> <label for="customRange3" class="form-label">🚗 Example range</label>
-
-
-            <input name='ee' type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3" value="24"
-              oninput="this.nextElementSibling.value = this.value">
-            <output>24</output> <label for="customRange3" class="form-label">😀 Example range</label>
-
-            <input name='ttta' type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3" value="24"
-              oninput="this.nextElementSibling.value = this.value">
-            <output>24</output> <label for="customRange3" class="form-label">😀 Example range</label>
           </div>
           <div class="col-md-5">
 
