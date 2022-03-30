@@ -134,6 +134,35 @@
       document.getElementsByName('LNG')[0].value = lng;
     });
   </script>
+  <button hidden id='modal_politica_de_privacidad' type="button" class="btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#exampleModal" data-bs-whatever="https://asolear.es/politica_de_privacidad/">ja</button>
+  <section id="modal">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- <h5 class="modal-title" id="exampleModalLabel" style="background-color:DodgerBlue;">   Simulador de Inversion en Renovables</h5> -->
+            <button type="button" class="btn btn-outline-primary btn-sm" data-bs-dismiss="modal">Inicio</button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex justify-content-center">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Send message</button> -->
+            <iframe id='iframe_direccion'
+              style="position:fixed; top:60px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+              Your browser doesn't support iframes </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 </body>
