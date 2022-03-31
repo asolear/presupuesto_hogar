@@ -15,86 +15,79 @@
     crossorigin=""></script>
 
 <body>
-  <section id='Contacto' class="contact">
-    <form id="form" action="https://formsubmit.co/admin@asolear.es" method="POST" enctype="multipart/form-data">
-      <input class="form-control" type="hidden" name="_captcha" value="false">
+  <form id="form" action="https://formsubmit.co/admin@asolear.es" method="POST" enctype="multipart/form-data">
+    <input class="form-control" type="hidden" name="_captcha" value="false">
 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-5">
-            <h3>Presupuesto para la instalacion FV en vivienda conectada a la red con:</h3>
-            <hr class="mt-2 mb-3" />
-            <input name='kW' type="range" class="form-range" min="0.1" max="15.1" value='4.0' step="0.1"
-              id="customRange3" oninput="this.nextElementSibling.value = this.value">
-            <output>4.0</output> <label for="customRange3" class="form-label">kW 📑 Potencia Contratada</label>
-            <hr class="mt-2 mb-3" />
-            <input name='kWh' type="range" class="form-range" min="1000" max="9999" value="3487" step="1"
-              id="customRange3" oninput="this.nextElementSibling.value = this.value">
-            <output>3487</output> <label for="customRange3" class="form-label">kWh 💡Consumo anual aprox.</label>
-            <!-- <hr class="mt-2 mb-3" />
+
+    <h3>Presupuesto para la instalacion FV en vivienda conectada a la red con:</h3>
+    <hr class="mt-2 mb-3" />
+    <input name='kW' type="range" class="form-range" min="0.1" max="15.1" value='4.0' step="0.1" id="customRange3"
+      oninput="this.nextElementSibling.value = this.value">
+    <output>4.0</output> <label for="customRange3" class="form-label">kW 📑 Potencia Contratada</label>
+    <hr class="mt-2 mb-3" />
+    <input name='kWh' type="range" class="form-range" min="1000" max="9999" value="3487" step="1" id="customRange3"
+      oninput="this.nextElementSibling.value = this.value">
+    <output>3487</output> <label for="customRange3" class="form-label">kWh 💡Consumo anual aprox.</label>
+    <!-- <hr class="mt-2 mb-3" />
             <label for="exampleFormControlInput1" class="form-label">(Opcional) Curva de carga <a tabindex="0"
                 data-bs-toggle="popover" data-bs-trigger="focus" title="en un plazo de meses"
                 data-bs-content="La instalacion es ampliable, su rentabilidad sera mayor si no esta sobredimensionada "><span
                   class="badge bg-secondary">i</span></a>:</label>
             <input name='Curva' type="file" id="myfile" name="myfile" multiple><br><br> -->
-            <hr class="mt-2 mb-3" />
-            <hr class="mt-2 mb-3" />
-            <label for="exampleFormControlInput1" class="form-label">Al disponer de energia mas barata, incrementara el
-              consumo al incorporar <a tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus"
-                title="en un plazo de meses"
-                data-bs-content="La instalacion es ampliable, su rentabilidad sera mayor si no esta sobredimensionada "><span
-                  class="badge bg-secondary">i</span></a> : </label>
+    <hr class="mt-2 mb-3" />
+    <hr class="mt-2 mb-3" />
+    <label for="exampleFormControlInput1" class="form-label">Al disponer de energia mas barata, prevee incrementar el
+      consumo al incorporar <a tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus"
+        title="Previsto en un plazo de meses"
+        data-bs-content="La instalacion es ampliable en cualquier momento. No es rentable que este sobredimensionada mas de unos pocos meses"><span
+          class="badge bg-secondary">i</span></a> : </label>
 
-            <div class="form-check form-switch">
-              <input name='Vehiculo' class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-              <label class="form-check-label" for="flexSwitchCheckDefault">🚗 Vehículo eléctrico</label>
-            </div>
-            <div class="form-check form-switch">
-              <input name='Aire' class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
-              <label class="form-check-label" for="flexSwitchCheckChecked">❄ Aire acondicionado</label>
-            </div>
-            <div class="form-check form-switch">
-              <input name='calor' class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled">
-              <label class="form-check-label" for="flexSwitchCheckDisabled">🌞 Bomba de calor</label>
-            </div>
-            <hr class="mt-2 mb-3" />
-            <div class="form-floating">
-              <textarea name='Comentarios' class="form-control" placeholder="Leave a comment here"
-                id="floatingTextarea"></textarea>
-              <label for="floatingTextarea">Comentarios</label>
-            </div>
-          </div>
-          <div class="col-md-5">
-            <hr class="mt-2 mb-3" />
-            <label for="floatingInputGrid">Marque donde iran los paneles</label>
+    <div class="form-check form-switch">
+      <input name='Vehiculo' class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+      <label class="form-check-label" for="flexSwitchCheckDefault">🚗 Vehículo eléctrico</label>
+    </div>
+    <div class="form-check form-switch">
+      <input name='Aire' class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+      <label class="form-check-label" for="flexSwitchCheckChecked">❄ Aire acondicionado</label>
+    </div>
+    <div class="form-check form-switch">
+      <input name='calor' class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">🌞 Aerotermia para calefaccion y ACS</label>
+    </div>
+    <hr class="mt-2 mb-3" />
+    <div class="form-floating">
+      <textarea name='Comentarios' class="form-control" placeholder="Leave a comment here"
+        id="floatingTextarea"></textarea>
+      <label for="floatingTextarea">Comentarios</label>
+    </div>
+    </div>
+    <div class="col-md-5">
+      <hr class="mt-2 mb-3" />
+      <label for="floatingInputGrid">Marque donde iran los paneles</label>
 
-            <div id="map" style="width: 100%; height: 100%;">
-              <input hidden name="LAT" id='flat' type="float">
-              <input hidden name="LNG" id='flon' type="float">
-            </div>
-            <hr class="mt-2 mb-3" />
-            <div class="form-floating">
-              <input name='correo' required type="email" class="form-control" id="floatingInputGrid"
-                placeholder="name@example.com" value="mdo@example.com">
-              <label for="floatingInputGrid">Su correo</label>
-            </div>
-            <input type="checkbox" required>
-            <label for="exampleFormControlInput1"> Acepto la <a href="politicaprivacidad.html">Política de
-                Privacidad.</a></label>
-            <input type="submit" class="btn btn-primary" value="Solicitar ahora">
-            <hr class="mt-2 mb-3" />
-            <hr class="mt-2 mb-3" />
-            <hr class="mt-2 mb-3" />
-            <hr class="mt-2 mb-3" />
-            <hr class="mt-2 mb-3" />
-            <hr class="mt-2 mb-3" />
-            <hr class="mt-2 mb-3" />
-            <hr class="mt-2 mb-3" />
-          </div>
-
-
-        </div>
-    </form>
+      <div id="map" style="width: 100%; height: 100%;">
+        <input hidden name="LAT" id='flat' type="float">
+        <input hidden name="LNG" id='flon' type="float">
+      </div>
+      <hr class="mt-2 mb-3" />
+      <div class="form-floating">
+        <input name='correo' required type="email" class="form-control" id="floatingInputGrid"
+          placeholder="name@example.com" value="mdo@example.com">
+        <label for="floatingInputGrid">Su correo</label>
+      </div>
+      <input type="checkbox" required>
+      <label for="exampleFormControlInput1"> Acepto la <a href="politicaprivacidad.html">Política de
+          Privacidad.</a></label>
+      <input type="submit" class="btn btn-primary" value="Solicitar ahora">
+      <hr class="mt-2 mb-3" />
+      <hr class="mt-2 mb-3" />
+      <hr class="mt-2 mb-3" />
+      <hr class="mt-2 mb-3" />
+      <hr class="mt-2 mb-3" />
+      <hr class="mt-2 mb-3" />
+      <hr class="mt-2 mb-3" />
+      <hr class="mt-2 mb-3" />
+  </form>
 
   </section>
 

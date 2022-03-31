@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asolear. Instalacion de paneles solares</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+<body>
+  <section id='Contacto' class="contact">
+    <form id="form" action="https://formsubmit.co/admin@asolear.es" method="POST" enctype="multipart/form-data">
+      <input class="form-control" type="hidden" name="_captcha" value="false">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <h3>Presupuesto para la instalacion FV en vivienda conectada a la red con:</h3>
+            <hr class="mt-2 mb-3" />
+            <input name='kW' type="range" class="form-range" min="0.1" max="15.1" value='4.0' step="0.1"
+              id="customRange3" oninput="this.nextElementSibling.value = this.value">
+            <output>4.0</output> <label for="customRange3" class="form-label">kW 📑 Potencia Contratada</label>
+            <hr class="mt-2 mb-3" />
+            <input name='kWh' type="range" class="form-range" min="1000" max="9999" value="3487" step="1"
+              id="customRange3" oninput="this.nextElementSibling.value = this.value">
+            <output>3487</output> <label for="customRange3" class="form-label">kWh 💡Consumo anual aprox.</label>
+            <!-- <hr class="mt-2 mb-3" />
+            <label for="exampleFormControlInput1" class="form-label">(Opcional) Curva de carga <a tabindex="0"
+                data-bs-toggle="popover" data-bs-trigger="focus" title="en un plazo de meses"
+                data-bs-content="La instalacion es ampliable, su rentabilidad sera mayor si no esta sobredimensionada "><span
+                  class="badge bg-secondary">i</span></a>:</label>
+            <input name='Curva' type="file" id="myfile" name="myfile" multiple><br><br> -->
+            <hr class="mt-2 mb-3" />
+            <hr class="mt-2 mb-3" />
+            <label for="exampleFormControlInput1" class="form-label">Al disponer de energia mas barata, incrementara el
+              consumo al incorporar <a tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus"
+                title="en un plazo de meses"
+                data-bs-content="La instalacion es ampliable, su rentabilidad sera mayor si no esta sobredimensionada "><span
+                  class="badge bg-secondary">i</span></a> : </label>
+
+            <div class="form-check form-switch">
+              <input name='Vehiculo' class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">🚗 Vehículo eléctrico</label>
+            </div>
+            <div class="form-check form-switch">
+              <input name='Aire' class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+              <label class="form-check-label" for="flexSwitchCheckChecked">❄ Aire acondicionado</label>
+            </div>
+            <div class="form-check form-switch">
+              <input name='calor' class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled">
+              <label class="form-check-label" for="flexSwitchCheckDisabled">🌞 Bomba de calor</label>
+            </div>
+            <hr class="mt-2 mb-3" />
+            <div class="form-floating">
+              <textarea name='Comentarios' class="form-control" placeholder="Leave a comment here"
+                id="floatingTextarea"></textarea>
+              <label for="floatingTextarea">Comentarios</label>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <hr class="mt-2 mb-3" />
+            <label for="floatingInputGrid">Marque donde iran los paneles</label>
+
+            <div id="map" style="width: 100%; height: 100%;">
+              <input hidden name="LAT" id='flat' type="float">
+              <input hidden name="LNG" id='flon' type="float">
+            </div>
+            <hr class="mt-2 mb-3" />
+            <div class="form-floating">
+              <input name='correo' required type="email" class="form-control" id="floatingInputGrid"
+                placeholder="name@example.com" value="mdo@example.com">
+              <label for="floatingInputGrid">Su correo</label>
+            </div>
+            <input type="checkbox" required>
+            <label for="exampleFormControlInput1"> Acepto la <a href="politicaprivacidad.html">Política de
+                Privacidad.</a></label>
+            <input type="submit" class="btn btn-primary" value="Solicitar ahora">
+            <hr class="mt-2 mb-3" />
+            <hr class="mt-2 mb-3" />
+            <hr class="mt-2 mb-3" />
+            <hr class="mt-2 mb-3" />
+            <hr class="mt-2 mb-3" />
+            <hr class="mt-2 mb-3" />
+            <hr class="mt-2 mb-3" />
+            <hr class="mt-2 mb-3" />
+          </div>
+
+
+        </div>
+    </form>
+
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+
+    var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+      trigger: 'focus'
+    })
+
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+  <script>
+    lat = 36.66422427761433
+    lng = -4.458672309828638
+    document.getElementsByName('LAT')[0].value = lat;
+    document.getElementsByName('LNG')[0].value = lng;
+
+    var map = L.map('map').setView([lat, lng], 6);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1
+    }).addTo(map);
+
+    var marker = L.marker([lat, lng]).addTo(map).bindPopup("<b>Ubicacion</b>");
+
+    map.on('click', function (e) {
+      lat = e.latlng.lat;
+      lng = e.latlng.lng;
+      if (marker)
+        map.removeLayer(marker);
+      console.log(lat, lng); // e is an event object (MouseEvent in this case)
+      marker = L.marker([lat, lng]).addTo(map).bindPopup("<b>Ubicacion</b>").openPopup();
+
+      document.getElementsByName('LAT')[0].value = lat;
+      document.getElementsByName('LNG')[0].value = lng;
+    });
+  </script>
+
+
+</body>
+
+
+</html>
