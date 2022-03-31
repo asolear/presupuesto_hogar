@@ -14,8 +14,6 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
 
-
-
 <body>
   <section id='Contacto' class="contact">
     <form id="form" action="https://formsubmit.co/admin@asolear.es" method="POST" enctype="multipart/form-data">
@@ -24,22 +22,22 @@
       <div class="container">
         <div class="row">
           <div class="col-md-5">
-            <h1>Presupuesto para vivienda:</h1>
+            <h3>Presupuesto para la instalacion FV en vivienda conectada a la red con:</h3>
             <hr class="mt-2 mb-3" />
             <input name='kW' type="range" class="form-range" min="0.1" max="15.1" value='4.0' step="0.1"
               id="customRange3" oninput="this.nextElementSibling.value = this.value">
-            <output>4.0</output> <label for="customRange3" class="form-label">kW 📑 Contratados</label>
+            <output>4.0</output> <label for="customRange3" class="form-label">kW 📑 Potencia Contratada</label>
             <hr class="mt-2 mb-3" />
             <input name='kWh' type="range" class="form-range" min="1000" max="9999" value="3487" step="1"
               id="customRange3" oninput="this.nextElementSibling.value = this.value">
-            <output>3487</output> <label for="customRange3" class="form-label">kWh 💡Consumo anual</label>
+            <output>3487</output> <label for="customRange3" class="form-label">kWh 💡Consumo anual aprox.</label>
             <hr class="mt-2 mb-3" />
-            <label for="exampleFormControlInput1" class="form-label">Curva de carga (si la
-              tiene):</label>
+            <label for="exampleFormControlInput1" class="form-label">Curva de carga (si esta disponible):</label>
             <input name='Curva' type="file" id="myfile" name="myfile" multiple><br><br>
             <hr class="mt-2 mb-3" />
             <hr class="mt-2 mb-3" />
-            <label for="exampleFormControlInput1" class="form-label">En los proximos meses incorpora: </label>
+            <label for="exampleFormControlInput1" class="form-label">Al disponer de energia mas barata considere si existe la posibilidad
+              de incrementar el consumo al incorporar (en un plazo de meses)  por ejemplo: </label>
 
             <div class="form-check form-switch">
               <input name='Vehiculo' class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
