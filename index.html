@@ -119,9 +119,9 @@
               id="customRange3" oninput="this.nextElementSibling.value = this.value">
             <output>4.0</output> <label for="customRange3" class="form-label">kW 📑 Potencia Contratada</label>
             <hr class="mt-2 mb-3" />
-            <input name='kWh' type="range" class="form-range" min="1000" max="9999" value="3487" step="1"
-              id="customRange3" oninput="this.nextElementSibling.value = this.value">
-            <output>290</output> <label for="customRange3" class="form-label">kWh 📊Consumo medio mensual.</label>
+            <input name='kWh' type="range" class="form-range" min="100" max="999" value="290" step="1" id="customRange3"
+              oninput="this.nextElementSibling.value = this.value">
+            <output>290</output> <label for="customRange3" class="form-label">kWh 📊Consumo mensual.</label>
           </div>
         </div>
       </div>
@@ -184,10 +184,10 @@
 
           <div class="col-md-5">
             <h5> Por ultimo indiquenos si los paneles estaran: </h5>
-            <select name='Orientacion' class="form-select"  aria-label="Default select example">
+            <select name='Orientacion' class="form-select" aria-label="Default select example">
               <option value="1">Orientados al Sur</option>
               <option value="2">Orientados al Sureste</option>
-              <option value="3">Orientados al Este</option>              
+              <option value="3">Orientados al Este</option>
               <option value="2">Orientados al SurOeste</option>
               <option value="3">Orientados al Oeste</option>
             </select>
@@ -207,8 +207,11 @@
           </div>
           <div class="col-md-5">
             <div id="map" style="min-height: 450px;height: 450px;"></div>
+            <input hidden name="LAT" id='flat' type="float">
+            <input hidden name="LNG" id='flon' type="float">
           </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -218,34 +221,20 @@
 
 
     <section class="services gradient">
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-          <path fill="#fff" fill-opacity="1"
-            d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
-          </path>
-        </svg>
-        <div class="container">
-          <div class="row align-items-center justify-content-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
+        <path fill="#fff" fill-opacity="1"
+          d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
+        </path>
+      </svg>
 
-
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210">
-            <path fill="#fff" fill-opacity="1"
-              d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
-            </path>
-          </svg>
-        </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210">
+        <path fill="#fff" fill-opacity="1"
+          d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+        </path>
+      </svg>
     </section>
 
 
-    <section>
-      <div>
-
-
-
-
-      </div>
-    </section>
 
 
 
@@ -255,35 +244,25 @@
         <div class="row align-items-center justify-content-center">
 
           <div class="col-md-5">
-            <div class="form-floating">
-              <textarea name='Comentarios' class="form-control" placeholder="Leave a comment here"
-                id="floatingTextarea"></textarea>
-              <label for="floatingTextarea">Comentarios</label>
-            </div>
+            <textarea name='Comentarios' class="form-control" placeholder="Deje su comentario aqui"
+              id="floatingTextarea"></textarea>
+          </div>
 
+          <div class="col-md-5">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input name='correo' required type="email" class="form-control" id="floatingInputGrid"
+              placeholder="name@example.com" value="mdo@example.com">
+            <input type="checkbox" required>
+            <label for="exampleFormControlInput1"> Acepto la <a href="politicaprivacidad.html">Política de
+                Privacidad.</a></label>
+            <input type="submit" class="btn btn-primary" value="Solicitar ahora">
 
-
-            <div class="col-md-5">
-              <div class="form-floating">
-                <input name='correo' required type="email" class="form-control" id="floatingInputGrid"
-                  placeholder="name@example.com" value="mdo@example.com">
-                <label for="floatingInputGrid">Su correo</label>
-              </div>
-              <input type="checkbox" required>
-              <label for="exampleFormControlInput1"> Acepto la <a href="politicaprivacidad.html">Política de
-                  Privacidad.</a></label>
-              <input type="submit" class="btn btn-primary" value="Solicitar ahora">
-
-
-            </div>
           </div>
         </div>
+      </div>
     </section>
 
-    <div class="services gradient" id="map">
-      <input hidden name="LAT" id='flat' type="float">
-      <input hidden name="LNG" id='flon' type="float">
-    </div>
+
 
   </form>
 
