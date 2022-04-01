@@ -91,12 +91,10 @@
 <body>
   <form id="form" action="https://formsubmit.co/admin@asolear.es" method="POST" enctype="multipart/form-data">
     <section class="feature gradient">
-      <div class="col-md-12">
-        <img src="img/app-screenshots/asolear.svg" alt="" class="img-fluid" />
-      </div>
+
       <div class="container pt-3">
         <div class="row align-items-center justify-content-center">
-          <h3>Presupuesto para la instalacion FV en vivienda conectada a la red con:</h3>
+          <h3>Presupuesto para la instalacion FV en vivienda conectada a la red.</h3>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
@@ -107,10 +105,11 @@
     </section>
 
 
-
     <section class="icons">
       <div class="container">
         <div class="row text-center">
+          <h5> De su factura de luz obtenga los datos de 'Potencia contratada' y 'consumo medio mensual'. </h5>
+
           <div class="col-md-5"><img class="img-fluid" src="factura1.png" alt="" /></div>
 
           <div class="col-md-5">
@@ -122,7 +121,7 @@
             <hr class="mt-2 mb-3" />
             <input name='kWh' type="range" class="form-range" min="1000" max="9999" value="3487" step="1"
               id="customRange3" oninput="this.nextElementSibling.value = this.value">
-            <output>290</output> <label for="customRange3" class="form-label">kWh 💡Consumo medio mensual.</label>
+            <output>290</output> <label for="customRange3" class="form-label">kWh 📊Consumo medio mensual.</label>
           </div>
         </div>
       </div>
@@ -147,14 +146,11 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-5">
-
-            <label for="exampleFormControlInput1" class="form-label">Al disponer de energia mas barata, prevee
-              incrementar
-              el
-              consumo al incorporar <a tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus"
-                title="Previsto en un plazo de meses"
+            <h5>Es probable que al disponer de energia mas barata incremente su consumo, en el futuro inmediato <a
+                tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Previsto en un plazo de meses"
                 data-bs-content="La instalacion es ampliable en cualquier momento. No es rentable que este sobredimensionada mas de unos pocos meses"><span
-                  class="badge bg-secondary">i</span></a> : </label>
+                  class="badge bg-secondary">i</span></a> prevee incorporar ? : </h5>
+
 
             <div class="form-check form-switch">
               <input name='Vehiculo' class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -181,6 +177,46 @@
 
 
 
+
+    <section class="icons">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+
+          <div class="col-md-5">
+            <h5> Por ultimo indiquenos si los paneles estaran: </h5>
+            <select name='Orientacion' class="form-select"  aria-label="Default select example">
+              <option value="1">Orientados al Sur</option>
+              <option value="2">Orientados al Sureste</option>
+              <option value="3">Orientados al Este</option>              
+              <option value="2">Orientados al SurOeste</option>
+              <option value="3">Orientados al Oeste</option>
+            </select>
+            <hr class="mt-2 mb-3" />
+            <select name='Inclinacion' class="form-select" aria-label="Default select example">
+              <option value="1">En una cubierta plana</option>
+              <option value="2">En un tejado poco inclinado</option>
+              <option value="3">En un tejado muy inclinado</option>
+            </select>
+            <hr class="mt-2 mb-3" />
+            <select name='sombras' class="form-select" aria-label="Default select example">
+              <option value="1">Sin sombras</option>
+              <option value="2">Da la sombra de la chimenea</option>
+              <option value="3">En invierno da un poco la sombra de edificios o arboles cercanos</option>
+              <option value="4">En invierno da mucho la sombra de edificios o arboles cercanos</option>
+            </select>
+          </div>
+          <div class="col-md-5">
+            <div id="map" style="min-height: 450px;height: 450px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
     <section class="services gradient">
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
@@ -191,25 +227,21 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
 
+
           </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210">
+            <path fill="#fff" fill-opacity="1"
+              d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+            </path>
+          </svg>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210">
-          <path fill="#fff" fill-opacity="1"
-            d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
-          </path>
-        </svg>
-      </div>
     </section>
 
 
     <section>
       <div>
 
-        <label for="floatingInputGrid">Marque donde iran los paneles</label>
-        <div id="map" style="width: 50%; height: 50%;">
-          <input hidden name="LAT" id='flat' type="float">
-          <input hidden name="LNG" id='flon' type="float">
-        </div>
+
 
 
       </div>
@@ -248,26 +280,20 @@
         </div>
     </section>
 
-
+    <div class="services gradient" id="map">
+      <input hidden name="LAT" id='flat' type="float">
+      <input hidden name="LNG" id='flon' type="float">
+    </div>
 
   </form>
+
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-  <script>
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-      return new bootstrap.Popover(popoverTriggerEl)
-    })
 
-    var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
-      trigger: 'focus'
-    })
-
-
-  </script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
