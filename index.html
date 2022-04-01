@@ -140,8 +140,8 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-5">
-            <h5>Es probable que al disponer de energia mas barata incremente su consumo, en el futuro inmediato <span
-                class="badge bg-secondary">i</span> prevee incorporar ? : </h5>
+            <h5>Es probable que al disponer de energia mas barata incremente su consumo si en el futuro inmediato <span
+                class="badge bg-secondary" onclick="document.getElementById('modal_nota_button').click()" >i</span> prevee incorporar ? : </h5>
           </div>
           <div class="col-md-5">
             <div class="form-check form-switch">
@@ -172,7 +172,7 @@
         <div class="row align-items-center justify-content-center">
 
           <div class="col-md-5">
-            <h5> Indiquenos com estaran situados los paneles: </h5>
+            <h5> Indiquenos como estaran situados los paneles: </h5>
             <select name='Orientacion' class="form-select" aria-label="Default select example">
               <option value="1">Orientados al Sur</option>
               <option value="2">Orientados al Sureste</option>
@@ -299,3 +299,36 @@
 
 
 </html>
+
+
+
+<section id="notas">
+  <!-- Button trigger modal -->
+  <button hidden id='modal_nota_button' type="button" class="btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#modal_nota">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal_nota" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modal_notaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal_notaLabel">🎯 !!Pero no sobredimensione su instalacion...!!</h5>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <div class="modal-body">
+
+          <h3> Utilizamos componentes 'paralelizables' lo que significa que no tiene que  preocuparse por desechar nada en futuras ampliaciones. </h3>
+          <p>  Su inversion se amortiza antes si no la sobredimensiona 'regalandola' o infrautilizandola, tenga en cuenta que dificilmente compensaran sus costes de procuccion. </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
