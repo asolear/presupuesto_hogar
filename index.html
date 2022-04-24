@@ -23,34 +23,47 @@
 </head>
 
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-6">
-      <div id="map" class="container"></div>
-      <!-- Add Styling for Google Maps-->
-      <link rel="stylesheet" type="text/css" href="static/styles/testmap.css">
-      </link>
-    </div>
-    <div class="col-lg-6">
-      <!-- Address And Contact Details From -->
-      <div class="container mt-5 mb-4">
-        <form action="https://formsubmit.co/admin@asolear.es" method="POST" enctype="multipart/form-data">
-
-          <h2 style="margin-bottom: 50px;">Arrastre el marcador o busque su direccion</h2>
+  <form action="https://formsubmit.co/admin@asolear.es" method="POST" enctype="multipart/form-data">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="container mt-5 mb-4">
           <div class="form-row">
-            <div class="col-md-6 mb-3">
+            <div >
+              <h2 style="margin-bottom: 50px;">Arrastre el marcador o busque su direccion</h2>
               <label for="validationServer03">Buscar</label>
               <input name="address" type="text" class="form-control is-valid" id="validationServer03"
                 placeholder="Please enter a location" aria-describedby="validationServer03Feedback" required>
-              <div id="validationServer03Feedback" class="valid-feedback">
-                <div>
-                  <b>Coordenadas:</b>
-                  <span id="coordinates" name="coordinates"></span>
-                </div>
-              </div>
-              <input type="hidden" id="currentLatitude" name="currentLatitude" value="lat variable">
-              <input type="hidden" id="currentLongitude" name="currentLongitude" value="lng variable">
+
             </div>
           </div>
+        </div>
+
+        <div class="form-row">
+          <div >
+            <div id="map" ></div>
+            <!-- Add Styling for Google Maps-->
+            <link rel="stylesheet" type="text/css" href="static/styles/testmap.css">
+            </link>
+          </div>
+          <div>
+
+            <div id="validationServer03Feedback" class="valid-feedback">
+              <div>
+                <b>Coordenadas:</b>
+                <span id="coordinates" name="coordinates"></span>
+              </div>
+            </div>
+            <input type="hidden" id="currentLatitude" name="currentLatitude" value="lat variable">
+            <input type="hidden" id="currentLongitude" name="currentLongitude" value="lng variable">
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-6">
+        <!-- Address And Contact Details From -->
+        <div class="container mt-5 mb-4">
           <div class="form-row">
             <div class="col-md-6 mb-3">
               <h5>🌞 Los paneles estaran... </h5>
@@ -101,7 +114,8 @@
 
           <div class="form-row">
             <div class="col-md-6 mb-3">
-              <h5> 📰 De su factura de luz obtenga los datos de 'Potencia contratada' y 'consumo medio mensual'.</h5>
+              <h5> 📰 De su factura de luz obtenga los datos de 'Potencia contratada' y 'consumo medio mensual'.
+              </h5>
               <input class="form-control" type="hidden" name="_captcha" value="false">
               <input name='kW' type="range" class="form-range" min="0.1" max="15.1" value='4.0' step="0.1"
                 id="customRange3" oninput="this.nextElementSibling.value = this.value">
@@ -143,8 +157,8 @@
               <h5>🧖‍♂️ yo soy... </h5>
 
               <label for="validationServer01">Nombre</label>
-              <input name="nombre" type="text" class="form-control" id="searchInput"
-                placeholder="Fulanito de Tal y Tal" required>
+              <input name="nombre" type="text" class="form-control" id="searchInput" placeholder="Fulanito de Tal y Tal"
+                required>
 
             </div>
           </div>
@@ -152,8 +166,8 @@
           <div class="form-row">
             <div class="col-md-6 mb-3">
               <label for="validationServer02">Tlf.</label>
-              <input name="telefono" type="text" class="form-control" id="validationServer02"
-                placeholder="999 000 999" required>
+              <input name="telefono" type="text" class="form-control" id="validationServer02" placeholder="999 000 999"
+                required>
 
             </div>
           </div>
@@ -182,14 +196,17 @@
           </div>
 
           <div class="pt-3">
-            <button href="#" id="buy_now_btn" class="btn btn-primary" type="submit" value="submit">Envienme el presupuesto</button>
+            <button href="#" id="buy_now_btn" class="btn btn-primary" type="submit" value="submit">Envienme el
+              presupuesto</button>
           </div>
 
-        </form>
+        </div>
       </div>
     </div>
-  </div>
+  </form>
+
 </div>
 
 </body>
+
 </html>
