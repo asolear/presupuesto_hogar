@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asolear. Instalacion de paneles solares</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <!-- Add Google Maps Via JavaScript-->
+  <script type="text/javascript" src="mapa.js"></script>
+
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNT1Fptd2xsBhUkzHB8gAP7lbwFIUzUas&libraries=places"></script> -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNo8yVR1bVgiLVO2QyXaRnHZRuMjVNuZ4&libraries=places"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      font-size: 1rem;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .gradient {
+      background: #00f;
+      background: linear-gradient(180deg,
+          #00f 0%,
+          #0f0 100%);
+    }
+
+    .page-header {
+      margin-top: 4rem;
+      font-size: 1.25rem;
+      color: #fff;
+    }
+
+    .feature {
+      color: #fff;
+    }
+
+    .feature ul {
+      padding-left: 2rem;
+      list-style-type: none;
+    }
+
+    .feature ul li {
+      padding-left: 2rem;
+      background-image: url(../img/check.svg);
+      background-repeat: no-repeat;
+      line-height: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .icon {
+      color: #fff;
+      height: 5rem;
+      width: 5rem;
+      font-size: 1.75rem;
+      border-radius: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery {
+      background-color: whitesmoke;
+    }
+
+    .gallery img {
+      border-radius: 5%;
+    }
+
+    .services {
+      color: #fff;
+    }
+
+    footer {
+      color: #fff;
+      font-size: 1rem;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    .unstyled-button {
+      border: none;
+      padding: 0;
+      background: none;
+    }
+
+    #map{
+    height: 700px;
+    width: 80%;
+    margin : auto;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+  </style>
+
+<body>
+  <form id="form" action="https://formsubmit.co/admin@asolear.es" method="POST" enctype="multipart/form-data">
+
+
+    <section class="services gradient">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
+        <path fill="#fff" fill-opacity="1"
+          d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
+        </path>
+      </svg>
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <h1>Su Presupuesto en 4 pasos</h1>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210">
+        <path fill="#fff" fill-opacity="1"
+          d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+        </path>
+      </svg>
+    </section>
+
+
+
+
+
+
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Paso 1.- 📊 Como es su consumo actual.
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+
+
+            <section class="icons">
+              <div class="container">
+                <div class="row text-center">
+                  <h5> 📰 De su factura de luz obtenga los datos de 'Potencia contratada' y 'consumo medio mensual'.
+                  </h5>
+                  <div class="col-md-5"><img class="img-fluid" src="factura1.png" alt="" /></div>
+                  <div class="col-md-5">
+                    <hr class="mt-2 mb-3" />
+                    <input class="form-control" type="hidden" name="_captcha" value="false">
+                    <input name='kW' type="range" class="form-range" min="0.1" max="15.1" value='4.0' step="0.1"
+                      id="customRange3" oninput="this.nextElementSibling.value = this.value">
+                    <output>4.0</output> <label for="customRange3" class="form-label">kW 📑 Potencia Contratada</label>
+                    <hr class="mt-2 mb-3" />
+                    <input name='kWh' type="range" class="form-range" min="100" max="999" value="290" step="1"
+                      id="customRange3" oninput="this.nextElementSibling.value = this.value">
+                    <output>290</output> <label for="customRange3" class="form-label">kWh 📊Consumo mensual.</label>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-default">CUPS</span>
+                      <input name='CUPS' placeholder="ES0099999999999999XXXX" type="text" class="form-control"
+                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Paso 2.- 🚘 Prevee algun cambio.
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+
+            <section class="icons">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
+                <path fill="#fff" fill-opacity="1"
+                  d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
+                </path>
+              </svg>
+              <div class="container">
+                <div class="row align-items-center justify-content-center">
+                  <div class="col-md-5">
+                    <h5>⚡ Es probable que al disponer de energia mas barata incremente su consumo si en el futuro
+                      inmediato
+                      <span class="badge bg-secondary"
+                        onclick="document.getElementById('modal_nota_button').click()">i</span>
+                      prevee incorporar:
+                    </h5>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="form-check form-switch">
+                      <input name='Vehiculo' class="form-check-input" type="checkbox" role="switch"
+                        id="flexSwitchCheckDefault">
+                      <label class="form-check-label" for="flexSwitchCheckDefault">🚗 Vehículo eléctrico</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input name='Aire' class="form-check-input" type="checkbox" role="switch"
+                        id="flexSwitchCheckChecked">
+                      <label class="form-check-label" for="flexSwitchCheckChecked">❄ Aire acondicionado</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input name='calor' class="form-check-input" type="checkbox" role="switch"
+                        id="flexSwitchCheckDisabled">
+                      <label class="form-check-label" for="flexSwitchCheckDisabled">🌞 Aerotermia para calefaccion y
+                        ACS</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210">
+                <path fill="#fff" fill-opacity="1"
+                  d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+                </path>
+              </svg>
+            </section>
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Paso 3.- 🌞 Los paneles.
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+
+
+            <section class="icons">
+              <div class="container">
+                <div class="row align-items-center justify-content-center">
+
+                  <div class="col-md-5">
+                    <h5>🧭 Estaran... </h5>
+                    <select name='Orientacion' class="form-select" aria-label="Default select example">
+                      <option value="1">Orientados al Sur</option>
+                      <option value="2">Orientados al Sureste</option>
+                      <option value="3">Orientados al Este</option>
+                      <option value="2">Orientados al SurOeste</option>
+                      <option value="3">Orientados al Oeste</option>
+                    </select>
+                    <hr class="mt-2 mb-3" />
+                    <select name='Inclinacion' class="form-select" aria-label="Default select example">
+                      <option value="2">En un tejado poco inclinado (20°)</option>
+                      <option value="3">En un tejado muy inclinado</option>
+                      <option value="1">En una cubierta plana</option>
+                    </select>
+                    <hr class="mt-2 mb-3" />
+                    <!-- <select name='sombras' class="form-select" aria-label="Default select example">
+                      <option value="1">Sin sombras</option>
+                      <option value="2">Con la sombra de la chimenea</option>
+                      <option value="3">Con un poco la sombra en invierno de edificios o arboles cercanos</option>
+                      <option value="4">Con mucha la sombra en invierno de edificios o arboles cercanos</option>
+                    </select> -->
+
+
+                    <hr class="mt-2 mb-3" />
+                  </div>
+
+
+                  <div class="col-md-5">
+                    <div class="container">
+                      <hr class="mt-2 mb-3" />
+                      <h5>🌇 y les dara la sombra... </h5>
+
+                      <input class="form-control" type="hidden" name="_captcha" value="false">
+                      <span class="input-group-text" id="inputGroup-sizing-default">⏰ desde las: </span>
+                      <input name='sombra_hora_desde' type="range" class="form-range" min="0" max="23" value=0 step="1"
+                        id="customRange3" oninput="this.nextElementSibling.value = this.value">
+                      <output>0</output> <label for="customRange3" class="form-label">horas </label>
+                      <span class="input-group-text" id="inputGroup-sizing-default">⏰ hasta las: </span>
+                      <input name='sombra_hora_hasta' type="range" class="form-range" min="0" max="23" value="0"
+                        step="1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
+                      <output>0</output> <label for="customRange3" class="form-label">horas </label>
+                      <select name='sombras' class="form-select" aria-label="Default select example">
+                        <option value="1">📅 de Diciembre a Enero</option>
+                        <option value="2">📅 de Diciembre a Febrero</option>
+                        <option value="3">📅 de Diciembre a Marzo</option>
+                        <option value="4">📅 de Diciembre a Abril</option>
+                        <option value="5">📅 de Diciembre a Mayo</option>
+                        <option value="6">📅 de Diciembre a Junio</option>
+                      </select>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+          </div>
+          </section>
+
+
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            Paso 4.-🗺 Su ubicacion.
+          </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+
+
+
+          </div>
+        </div>
+
+
+
+        <section class="icons">
+          <div class="container">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-5">
+                <div class="container">
+                  <div id="map" style="min-height: 450px;height: 450px;"></div>
+                  <input hidden name="LAT" id='flat' type="float">
+                  <input hidden name="LNG" id='flon' type="float">
+                </div>
+              </div>
+
+              <div class="col-md-5">
+                <div class="form-floating mb-3">
+                  <hr class="mt-2 mb-3" />
+
+                  <input required name='correo' type="email" class="form-control" id="floatingInput"
+                    placeholder="name@example.com">
+                  <label for="floatingInput">📮 Email</label>
+                </div>
+                <input type="checkbox" required>
+                <label for="exampleFormControlInput1"> Acepto la <a href="politicaprivacidad.html">Política de
+                    Privacidad.</a></label>
+                <input type="submit" class="btn btn-primary" value="Solicitar ahora">
+                <p> Con su presupuesto le enviaremos los datos económicos y declaraciones necesarios para solicitar
+                  incentivos Next Generation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        <!-- <div class="container">
+              <textarea name='Comentarios' class="form-control" placeholder="📝 Deje su comentario aqui"
+                id="floatingTextarea"></textarea>
+            </div> -->
+        <!-- <h3>Instalacion FV en vivienda conectada a la red.</h3> -->
+
+
+
+
+        <section class="services gradient">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
+            <path fill="#fff" fill-opacity="1"
+              d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
+            </path>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210">
+            <path fill="#fff" fill-opacity="1"
+              d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+            </path>
+          </svg>
+        </section>
+
+
+
+        <section>
+          <div class="col-lg-6">
+
+            <div id="map" class="container mt-5 mb-5"></div>
+
+
+            <!-- Add Styling for Google Maps-->
+            <link rel="stylesheet" type="text/css" href="static/styles/testmap.css">
+            </link>
+
+
+          </div>
+          <div class="col-lg-6">
+
+            <!-- Address And Contact Details From -->
+
+            <div class="container mt-5 mb-4">
+              <form action="/checkmyroof" method="post" id="checkout_form">
+
+                <h2 style="margin-bottom: 50px;">Find your property on the map</h2>
+
+
+                <!-- Flash Flash
+              {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  {% for message in messages %}
+                    <p>{{ message }}</p>
+                  {% endfor %}
+                {% endif %}
+              {% endwith %} -->
+
+
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationServer03">Search Address</label>
+                    <input name="address" type="text" class="form-control is-invalid" id="validationServer03"
+                      placeholder="Please enter a location" aria-describedby="validationServer03Feedback" required>
+                    <div id="validationServer03Feedback" class="invalid-feedback">
+                      <div>
+                        <b>Coordinates:</b>
+                        <span id="coordinates" name="coordinates"></span>
+                      </div>
+                      Please place the marker on the roof you want a drawing for.
+                    </div>
+                    <input type="hidden" id="currentLatitude" name="currentLatitude" value="lat variable">
+                    <input type="hidden" id="currentLongitude" name="currentLongitude" value="lng variable">
+                  </div>
+                </div>
+
+
+
+        </section>
+
+
+
+
+  </form>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+  <script>
+    lat = 36.66422427761433
+    lng = -4.458672309828638
+    document.getElementsByName('LAT')[0].value = lat;
+    document.getElementsByName('LNG')[0].value = lng;
+
+    var map = L.map('map').setView([lat, lng], 6);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1
+    }).addTo(map);
+
+    var marker = L.marker([lat, lng]).addTo(map).bindPopup("<b>Ubicacion</b>");
+
+    map.on('click', function (e) {
+      lat = e.latlng.lat;
+      lng = e.latlng.lng;
+      if (marker)
+        map.removeLayer(marker);
+      console.log(lat, lng); // e is an event object (MouseEvent in this case)
+      marker = L.marker([lat, lng]).addTo(map).bindPopup("<b>Ubicacion</b>").openPopup();
+
+      document.getElementsByName('LAT')[0].value = lat;
+      document.getElementsByName('LNG')[0].value = lng;
+    });
+  </script>
+
+
+</body>
+
+
+</html>
+
+
+
+<section id="notas">
+  <!-- Button trigger modal -->
+  <button hidden id='modal_nota_button' type="button" class="btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#modal_nota">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal_nota" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal_notaLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal_notaLabel">🎯 !!Pero no sobredimensione su instalacion...!!</h5>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <div class="modal-body">
+
+          <h3> Utilizamos componentes 'paralelizables' lo que significa que no tiene que preocuparse por desechar nada
+            en futuras ampliaciones. </h3>
+          <p> Su inversion se amortiza antes si no la sobredimensiona 'regalando' o infrautilizando su energia, tenga en
+            cuenta que dificilmente compensaran sus costes de produccion. </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
