@@ -35,13 +35,13 @@
       <div class="container mt-5 mb-4">
         <form action="https://formsubmit.co/admin@asolear.es" method="POST" enctype="multipart/form-data">
 
-          <h2 style="margin-bottom: 50px;">Arrastre el marcador a su ubicacion</h2>
+          <h2 style="margin-bottom: 50px;">Arrastre el marcador o busque su direccion</h2>
           <div class="form-row">
             <div class="col-md-6 mb-3">
-              <label for="validationServer03">Busque la direccion</label>
-              <input name="address" type="text" class="form-control is-invalid" id="validationServer03"
+              <label for="validationServer03">Buscar</label>
+              <input name="address" type="text" class="form-control is-valid" id="validationServer03"
                 placeholder="Please enter a location" aria-describedby="validationServer03Feedback" required>
-              <div id="validationServer03Feedback" class="invalid-feedback">
+              <div id="validationServer03Feedback" class="valid-feedback">
                 <div>
                   <b>Coordenadas:</b>
                   <span id="coordinates" name="coordinates"></span>
@@ -53,6 +53,7 @@
           </div>
           <div class="form-row">
             <div class="col-md-6 mb-3">
+              <h5>🌞 Los paneles estaran... </h5>
               <select name='Orientacion' class="form-select" aria-label="Default select example">
                 <option value="S">Orientados al Sur</option>
                 <option value="SE">Orientados al Sureste</option>
@@ -100,6 +101,7 @@
 
           <div class="form-row">
             <div class="col-md-6 mb-3">
+              <h5> 📰 De su factura de luz obtenga los datos de 'Potencia contratada' y 'consumo medio mensual'.</h5>
               <input class="form-control" type="hidden" name="_captcha" value="false">
               <input name='kW' type="range" class="form-range" min="0.1" max="15.1" value='4.0' step="0.1"
                 id="customRange3" oninput="this.nextElementSibling.value = this.value">
@@ -138,18 +140,20 @@
 
           <div class="form-row">
             <div class="col-md-6 order-mb-3">
-              <label for="validationServer01">First name</label>
-              <input name="firstname" type="text" class="form-control is-valid" id="searchInput"
-                placeholder="Enter name" required>
+              <h5>🧖‍♂️ yo soy... </h5>
+
+              <label for="validationServer01">Nombre</label>
+              <input name="nombre" type="text" class="form-control" id="searchInput"
+                placeholder="Fulanito de Tal y Tal" required>
 
             </div>
           </div>
 
           <div class="form-row">
             <div class="col-md-6 mb-3">
-              <label for="validationServer02">Last name</label>
-              <input name="secondname" type="text" class="form-control is-valid" id="validationServer02"
-                placeholder="Enter surname" required>
+              <label for="validationServer02">Tlf.</label>
+              <input name="telefono" type="text" class="form-control" id="validationServer02"
+                placeholder="999 000 999" required>
 
             </div>
           </div>
@@ -157,9 +161,9 @@
 
           <div class="form-row">
             <div class="col-md-6 mb-3">
+              <label for="validationServer02">Email</label>
               <input required name='correo' type="email" class="form-control" id="floatingInput"
-                placeholder="name@example.com">
-              <label for="floatingInput">📮 Email</label>
+                placeholder="nombre@gmail.com">
 
             </div>
           </div>
@@ -178,8 +182,7 @@
           </div>
 
           <div class="pt-3">
-            <button href="#" id="buy_now_btn" class="btn btn-primary" type="submit" value="submit">Proceed to
-              Payment</button>
+            <button href="#" id="buy_now_btn" class="btn btn-primary" type="submit" value="submit">Envienme el presupuesto</button>
           </div>
 
         </form>
@@ -187,8 +190,6 @@
     </div>
   </div>
 </div>
-<!-- Carrys out stripe paymnet page-->
-<script src="https://js.stripe.com/v3/"></script>
-<script src="static/JavaScript/script-ajax.js"></script>
+
 </body>
 </html>
