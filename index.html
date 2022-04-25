@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Google Map</title>
+  <title>Formulario</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -27,44 +27,103 @@
     <div>
 
 
-
-
-      <section>
-        <div>
-          <h2 style="margin-bottom: 50px;">Su direccion </h2>
-          <div>
-            <div>
-              <div>
-                <label for="validationServer03">Buscar</label>
-                <input name="address" type="text" class="form-control is-valid" id="validationServer03"
-                  placeholder="Por favor meta su direccion" aria-describedby="validationServer03Feedback" required>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <label for="validationServer03">Arrastre el marcador</label>
-
-              <div id="map"></div>
-              <!-- Add Styling for Google Maps-->
-              <link rel="stylesheet" type="text/css" href="static/styles/mapa.css">
-              </link>
-            </div>
-            <div>
-              <div id="validationServer03Feedback" class="valid-feedback">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <h2 style="margin-bottom: 50px;">Su direccion </h2>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <section>
                 <div>
-                  <b>Coordenadas:</b>
-                  <span id="coordinates" name="coordinates"></span>
+                  <div>
+                    <div>
+                      <div>
+                        <label for="validationServer03">Buscar</label>
+                        <input name="address" type="text" class="form-control is-valid" id="validationServer03"
+                          placeholder="Por favor meta su direccion" aria-describedby="validationServer03Feedback" required>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div>
+                    <div>
+                      <label for="validationServer03">Arrastre el marcador</label>
+        
+                      <div id="map"></div>
+                      <!-- Add Styling for Google Maps-->
+                      <link rel="stylesheet" type="text/css" href="static/styles/mapa.css">
+                      </link>
+                    </div>
+                    <div>
+                      <div id="validationServer03Feedback" class="valid-feedback">
+                        <div>
+                          <b>Coordenadas:</b>
+                          <span id="coordinates" name="coordinates"></span>
+                        </div>
+                      </div>
+                      <input type="hidden" id="currentLatitude" name="currentLatitude" value="lat variable">
+                      <input type="hidden" id="currentLongitude" name="currentLongitude" value="lng variable">
+                    </div>
+                  </div>
+        
                 </div>
-              </div>
-              <input type="hidden" id="currentLatitude" name="currentLatitude" value="lat variable">
-              <input type="hidden" id="currentLongitude" name="currentLongitude" value="lng variable">
+              </section>
+        
+              <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
             </div>
           </div>
-
         </div>
-      </section>
+
+
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              <!-- <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              <!-- <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -250,5 +309,7 @@
   </form>
 </div>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
 </html>
