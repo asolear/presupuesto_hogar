@@ -22,6 +22,12 @@
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 </head>
 
+
+
+
+
+
+
 <div class="container-fluid">
   <form action="https://formsubmit.co/admin@asolear.es" method="POST" enctype="multipart/form-data">
     <div>
@@ -37,96 +43,109 @@
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <section>
-                <div>
-                  <div>
-                    <div>
+
+
+
+
+
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card">
+                    <section>
                       <div>
-                        <label for="validationServer03">Buscar</label>
-                        <input name="address" type="text" class="form-control is-valid" id="validationServer03"
-                          placeholder="Por favor meta su direccion" aria-describedby="validationServer03Feedback"
-                          required>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div>
-                      <label for="validationServer03">Arrastre el marcador</label>
-
-                      <div id="map"></div>
-                      <!-- Add Styling for Google Maps-->
-                      <link rel="stylesheet" type="text/css" href="static/styles/mapa.css">
-                      </link>
-                    </div>
-                    <div>
-                      <div id="validationServer03Feedback" class="valid-feedback">
                         <div>
-                          <b>Coordenadas:</b>
-                          <span id="coordinates" name="coordinates"></span>
+                          <div>
+                            <div>
+                              <label for="validationServer03">Buscar</label>
+                              <input name="address" type="text" class="form-control is-valid" id="validationServer03"
+                                placeholder="Por favor meta su direccion" aria-describedby="validationServer03Feedback"
+                                required>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div>
+                            <label for="validationServer03">Arrastre el marcador</label>
+
+                            <div id="map"></div>
+                            <!-- Add Styling for Google Maps-->
+                            <link rel="stylesheet" type="text/css" href="static/styles/mapa.css">
+                            </link>
+                          </div>
+                          <div>
+                            <div id="validationServer03Feedback" class="valid-feedback">
+                              <div>
+                                <b>Coordenadas:</b>
+                                <span id="coordinates" name="coordinates"></span>
+                              </div>
+                            </div>
+                            <input type="hidden" id="currentLatitude" name="currentLatitude" value="lat variable">
+                            <input type="hidden" id="currentLongitude" name="currentLongitude" value="lng variable">
+                          </div>
+                        </div>
+
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+
+
+                    <section>
+                      <div>
+                        <!-- Address And Contact Details From -->
+                        <div>
+                          <div>
+                            <div c>
+                              <select name='Orientacion' class="form-select" aria-label="Default select example">
+                                <option value="S">Orientados al Sur</option>
+                                <option value="SE">Orientados al Sureste</option>
+                                <option value="E">Orientados al Este</option>
+                                <option value="SO">Orientados al SurOeste</option>
+                                <option value="O">Orientados al Oeste</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div>
+                            <div c>
+                              <select name='Inclinacion' class="form-select" aria-label="Default select example">
+                                <option value="2">En un tejado poco inclinado (20°)</option>
+                                <option value="3">En un tejado muy inclinado</option>
+                                <option value="1">En una cubierta plana</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div c>
+                              <h5>🌇 y les dara la sombra... </h5>
+                              <input class="form-control" type="hidden" name="_captcha" value="false">
+                              <span class="input-group-text" id="inputGroup-sizing-default">⏰ desde las: </span>
+                              <input name='sombra_hora_desde' type="range" class="form-range" min="0" max="23" value=0
+                                step="1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
+                              <output>0</output> <label for="customRange3" class="form-label">horas </label>
+                              <span class="input-group-text" id="inputGroup-sizing-default">⏰ hasta las: </span>
+                              <input name='sombra_hora_hasta' type="range" class="form-range" min="0" max="23" value="0"
+                                step="1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
+                              <output>0</output> <label for="customRange3" class="form-label">horas </label>
+                              <select name='sombras' class="form-select" aria-label="Default select example">
+                                <option value="1">📅 de Diciembre a Enero</option>
+                                <option value="2">📅 de Diciembre a Febrero</option>
+                                <option value="3">📅 de Diciembre a Marzo</option>
+                                <option value="4">📅 de Diciembre a Abril</option>
+                                <option value="5">📅 de Diciembre a Mayo</option>
+                                <option value="6">📅 de Diciembre a Junio</option>
+                              </select>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <input type="hidden" id="currentLatitude" name="currentLatitude" value="lat variable">
-                      <input type="hidden" id="currentLongitude" name="currentLongitude" value="lng variable">
-                    </div>
-                  </div>
-
-                </div>
-              </section>
-
-
-
-
-              <section>
-                <div>
-                  <!-- Address And Contact Details From -->
-                  <div>
-                    <div>
-                      <div c>
-                        <select name='Orientacion' class="form-select" aria-label="Default select example">
-                          <option value="S">Orientados al Sur</option>
-                          <option value="SE">Orientados al Sureste</option>
-                          <option value="E">Orientados al Este</option>
-                          <option value="SO">Orientados al SurOeste</option>
-                          <option value="O">Orientados al Oeste</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div>
-                      <div c>
-                        <select name='Inclinacion' class="form-select" aria-label="Default select example">
-                          <option value="2">En un tejado poco inclinado (20°)</option>
-                          <option value="3">En un tejado muy inclinado</option>
-                          <option value="1">En una cubierta plana</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div>
-                      <div c>
-                        <h5>🌇 y les dara la sombra... </h5>
-                        <input class="form-control" type="hidden" name="_captcha" value="false">
-                        <span class="input-group-text" id="inputGroup-sizing-default">⏰ desde las: </span>
-                        <input name='sombra_hora_desde' type="range" class="form-range" min="0" max="23" value=0
-                          step="1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
-                        <output>0</output> <label for="customRange3" class="form-label">horas </label>
-                        <span class="input-group-text" id="inputGroup-sizing-default">⏰ hasta las: </span>
-                        <input name='sombra_hora_hasta' type="range" class="form-range" min="0" max="23" value="0"
-                          step="1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
-                        <output>0</output> <label for="customRange3" class="form-label">horas </label>
-                        <select name='sombras' class="form-select" aria-label="Default select example">
-                          <option value="1">📅 de Diciembre a Enero</option>
-                          <option value="2">📅 de Diciembre a Febrero</option>
-                          <option value="3">📅 de Diciembre a Marzo</option>
-                          <option value="4">📅 de Diciembre a Abril</option>
-                          <option value="5">📅 de Diciembre a Mayo</option>
-                          <option value="6">📅 de Diciembre a Junio</option>
-                        </select>
-                      </div>
-                    </div>
+                    </section>
                   </div>
                 </div>
-              </section>
+              </div>
 
               <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
             </div>
@@ -154,51 +173,62 @@
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
 
-              <section>
-                <div>
-                  <div>
-                    <input class="form-control" type="hidden" name="_captcha" value="false">
-                    <input name='kW' type="range" class="form-range" min="0.1" max="15.1" value='4.0' step="0.1"
-                      id="customRange3" oninput="this.nextElementSibling.value = this.value">
-                    <output>4.0</output> <label for="customRange3" class="form-label">kW 📑 Potencia Contratada</label>
-                    <input name='kWh' type="range" class="form-range" min="100" max="999" value="290" step="1"
-                      id="customRange3" oninput="this.nextElementSibling.value = this.value">
-                    <output>290</output> <label for="customRange3" class="form-label">kWh 📊Consumo mensual.</label>
-                    <div class="input-group mb-3">
-                      <span class="input-group-text" id="inputGroup-sizing-default">CUPS</span>
-                      <input name='CUPS' placeholder="ES0099999999999999XXXX" type="text" class="form-control"
-                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                    </div>
+
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card">
+                    <section>
+                      <div>
+                        <div>
+                          <input class="form-control" type="hidden" name="_captcha" value="false">
+                          <input name='kW' type="range" class="form-range" min="0.1" max="15.1" value='4.0' step="0.1"
+                            id="customRange3" oninput="this.nextElementSibling.value = this.value">
+                          <output>4.0</output> <label for="customRange3" class="form-label">kW 📑 Potencia
+                            Contratada</label>
+                          <input name='kWh' type="range" class="form-range" min="100" max="999" value="290" step="1"
+                            id="customRange3" oninput="this.nextElementSibling.value = this.value">
+                          <output>290</output> <label for="customRange3" class="form-label">kWh 📊Consumo
+                            mensual.</label>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default">CUPS</span>
+                            <input name='CUPS' placeholder="ES0099999999999999XXXX" type="text" class="form-control"
+                              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                          </div>
+                        </div>
+                      </div>
+                    </section>
                   </div>
                 </div>
-              </section>
+                <div class="col">
 
-              <section>
-                <div>
-                  <div>
+
+                  <section>
                     <div>
-                      <div class="form-check form-switch">
-                        <input name='Vehiculo' class="form-check-input" type="checkbox" role="switch"
-                          id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">🚗 Vehículo eléctrico</label>
-                      </div>
-                      <div class="form-check form-switch">
-                        <input name='Aire' class="form-check-input" type="checkbox" role="switch"
-                          id="flexSwitchCheckChecked">
-                        <label class="form-check-label" for="flexSwitchCheckChecked">❄ Aire acondicionado</label>
-                      </div>
-                      <div class="form-check form-switch">
-                        <input name='calor' class="form-check-input" type="checkbox" role="switch"
-                          id="flexSwitchCheckDisabled">
-                        <label class="form-check-label" for="flexSwitchCheckDisabled">🌞 Aerotermia para calefaccion y
-                          ACS</label>
+                      <div>
+                        <div>
+                          <div class="form-check form-switch">
+                            <input name='Vehiculo' class="form-check-input" type="checkbox" role="switch"
+                              id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">🚗 Vehículo eléctrico</label>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input name='Aire' class="form-check-input" type="checkbox" role="switch"
+                              id="flexSwitchCheckChecked">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">❄ Aire acondicionado</label>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input name='calor' class="form-check-input" type="checkbox" role="switch"
+                              id="flexSwitchCheckDisabled">
+                            <label class="form-check-label" for="flexSwitchCheckDisabled">🌞 Aerotermia para calefaccion
+                              y
+                              ACS</label>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </section>
                 </div>
-              </section>
-
-
+              </div>
               <!-- <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
             </div>
           </div>
@@ -224,45 +254,63 @@
             <div class="accordion-body">
 
 
-              <section>
-                <div>
-                  <div>
-                    <div>
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card">
 
-                      <label for="validationServer01">Nombre</label>
-                      <input name="nombre" type="text" class="form-control" id="searchInput"
-                        placeholder="Fulanito de Tal y Tal" required>
-                    </div>
-                  </div>
-                  <div>
-                    <div c>
-                      <label for="validationServer02">Tlf.</label>
-                      <input name="telefono" type="text" class="form-control" id="validationServer02"
-                        placeholder="999 000 999" required>
-                    </div>
-                  </div>
-                  <div>
-                    <div c>
-                      <label for="validationServer02">Email</label>
-                      <input required name='correo' type="email" class="form-control" id="floatingInput"
-                        placeholder="nombre@gmail.com">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-check">
-                      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3"
-                        aria-describedby="invalidCheck3Feedback" required>
-                      <label class="form-check-label" for="invalidCheck3">
-                        Acepto la <a href="politicaprivacidad.html">Política de
-                          Privacidad.</a> </label>
-                    </div>
-                  </div>
-                  <div class="pt-3">
-                    <button href="#" id="buy_now_btn" class="btn btn-primary" type="submit" value="submit">Envienme el
-                      presupuesto</button>
+                    <section>
+                      <div>
+                        <div>
+                          <div>
+
+                            <label for="validationServer01">Nombre</label>
+                            <input name="nombre" type="text" class="form-control" id="searchInput"
+                              placeholder="Fulanito de Tal y Tal" required>
+                          </div>
+                        </div>
+                        <div>
+                          <div c>
+                            <label for="validationServer02">Tlf.</label>
+                            <input name="telefono" type="text" class="form-control" id="validationServer02"
+                              placeholder="999 000 999" required>
+                          </div>
+                        </div>
+                        <div>
+                          <div c>
+                            <label for="validationServer02">Email</label>
+                            <input required name='correo' type="email" class="form-control" id="floatingInput"
+                              placeholder="nombre@gmail.com">
+                          </div>
+                        </div>
+
+                      </div>
+                    </section>
                   </div>
                 </div>
-              </section>
+                <div class="col">
+                  <div class="card">
+
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3"
+                          aria-describedby="invalidCheck3Feedback" required>
+                        <label class="form-check-label" for="invalidCheck3">
+                          Acepto la <a href="politicaprivacidad.html">Política de
+                            Privacidad.</a> </label>
+                      </div>
+                    </div>
+                    <div class="pt-3">
+                      <button href="#" id="buy_now_btn" class="btn btn-primary" type="submit" value="submit">Envienme el
+                        presupuesto</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+
+
               <!-- <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
             </div>
           </div>
