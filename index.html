@@ -29,18 +29,19 @@
 
 
 <div class="container-fluid">
-  <form action="https://formsubmit.co/admin@asolear.es" method="POST" enctype="multipart/form-data">
+  <form id='formulario_fv_conectada' action="https://formsubmit.co/admin@asolear.es" method="POST"
+    enctype="multipart/form-data">
     <div>
 
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" style="background-color:orange;" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <button class="accordion-button collapsed" style="background-color:orange;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               <h2 style="margin-bottom: 5px;">🗺 Mi instalacion FV </h2>
             </button>
           </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -122,7 +123,7 @@
                           <div>
                             <div c>
                               <h5>🌇 y les dara la sombra:</h5>
-                              <input class="form-control" type="hidden" name="_captcha" value="false">
+                              <!-- <input class="form-control" type="hidden" name="_captcha" value="false"> -->
                               <span class="input-group-text" id="inputGroup-sizing-default">⏰ desde las: </span>
                               <input name='sombra_hora_desde' type="range" class="form-range" min="0" max="23" value=0
                                 step="1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
@@ -196,7 +197,7 @@
                             mensual.</label>
                           <div class="input-group mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-default">CUPS</span>
-                            <input name='CUPS' placeholder="ES0099999999999999XXXX" type="text" class="form-control"
+                            <input name='CUPS' placeholder="ES0099999999999999XXXX" value="ES0099999999999999XXXX" type="text" class="form-control"
                               aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                           </div>
                         </div>
@@ -210,7 +211,8 @@
 
                     <section>
                       <div>
-                        <label>⚡ Es probable que al disponer de energia mas barata incremente su consumo. Tiene previsto comprar (en cuestion de meses): </label>
+                        <label>⚡ Es probable que al disponer de energia mas barata incremente su consumo. Tiene previsto
+                          comprar (en cuestion de meses): </label>
 
                         <div>
                           <div>
@@ -309,7 +311,8 @@
                       </div>
                     </div>
                     <div class="pt-3">
-                      <button href="#" id="buy_now_btn" class="btn btn-primary btn-lg" type="submit" value="submit">Envienme el
+                      <button href="#" id="buy_now_btn" class="btn btn-primary btn-lg" type="submit"
+                        value="submit">Envienme el
                         presupuesto</button>
                     </div>
 
@@ -350,9 +353,24 @@
       <hr>
       <hr>
   </form>
+  <div class="results">
+    <h2>Form Data</h2>
+    <pre></pre>
+  </div>
 </div>
 </body>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
 
 </html>
