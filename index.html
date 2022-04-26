@@ -156,8 +156,8 @@
                                 <span id="coordinates" name="coordinates"></span>
                               </div>
                             </div>
-                            <input type="hidden" id="currentLatitude" name="currentLatitude" value="lat variable">
-                            <input type="hidden" id="currentLongitude" name="currentLongitude" value="lng variable">
+                            <input type="hidden" id="currentLatitude" name="lat" value="lat variable">
+                            <input type="hidden" id="currentLongitude" name="lon" value="lng variable">
                           </div>
                         </div>
 
@@ -176,7 +176,7 @@
                               <h5>🌇 Con las placas FV situadas con: </h5>
                               <div>
                                 <label>Inclinacion: </label>
-                                <select name='Inclinacion' class="form-select" aria-label="Default select example">
+                                <select name='inclinacion' class="form-select" aria-label="Default select example">
                                   <option value="En un tejado poco inclinado (20°)">En un tejado poco inclinado (20°)
                                   </option>
                                   <option value="En un tejado muy inclinado">En un tejado muy inclinado</option>
@@ -187,7 +187,7 @@
                               <div>
                                 <div>
                                   <label>Orientacion: </label>
-                                  <select name='Orientacion' class="form-select" aria-label="Default select example">
+                                  <select name='orientacion' class="form-select" aria-label="Default select example">
                                     <option value="S">Orientados al Sur</option>
                                     <option value="SE">Orientados al Sureste</option>
                                     <option value="E">Orientados al Este</option>
@@ -213,7 +213,7 @@
                               <output>0</output> <label for="customRange3" class="form-label">horas </label>
                               <hr>
                               <label>Los meses de:</label>
-                              <select name='sombras' class="form-select" aria-label="Default select example">
+                              <select name='sombras_mes' class="form-select" aria-label="Default select example">
                                 <option value="1">📅 de Diciembre a Enero</option>
                                 <option value="2">📅 de Diciembre a Febrero</option>
                                 <option value="3">📅 de Diciembre a Marzo</option>
@@ -267,7 +267,7 @@
 
                         <div>
                           <input class="form-control" type="hidden" name="_captcha" value="false">
-                          <input name='kW' type="range" class="form-range" min="0.1" max="15.1" value='4.0' step="0.1"
+                          <input name='kWcontratad' type="range" class="form-range" min="0.1" max="15.1" value='4.0' step="0.1"
                             id="customRange3" oninput="this.nextElementSibling.value = this.value">
                           <output>4.0</output> <label for="customRange3" class="form-label">kW </label>
                           <input name='kWh' type="range" class="form-range" min="100" max="999" value="290" step="1"
@@ -296,12 +296,12 @@
                         <div>
                           <div>
                             <div class="form-check form-switch">
-                              <input name='Vehiculo' class="form-check-input" type="checkbox" role="switch" value=False
+                              <input name='vehiculo' class="form-check-input" type="checkbox" role="switch" value=False
                                 id="flexSwitchCheckDefault">
                               <label class="form-check-label" for="flexSwitchCheckDefault">🚗 Vehículo eléctrico</label>
                             </div>
                             <div class="form-check form-switch">
-                              <input name='Aire' class="form-check-input" type="checkbox" role="switch"  value=False
+                              <input name='aire' class="form-check-input" type="checkbox" role="switch"  value=False
                                 id="flexSwitchCheckChecked">
                               <label class="form-check-label" for="flexSwitchCheckChecked">❄ Aire acondicionado</label>
                             </div>
@@ -355,21 +355,21 @@
                           <div>
 
                             <label for="validationServer01">Nombre</label>
-                            <input name="nombre" type="text" class="form-control" id="searchInput"
+                            <input name="destinatario_nombre" type="text" class="form-control" id="searchInput"
                               placeholder="Fulanito de Tal y Tal" required>
                           </div>
                         </div>
                         <div>
                           <div c>
                             <label for="validationServer02">Tlf.</label>
-                            <input name="telefono" type="text" class="form-control" id="validationServer02"
+                            <input name="destinatario_Telefono" type="text" class="form-control" id="validationServer02"
                               placeholder="999 000 999" required>
                           </div>
                         </div>
                         <div>
                           <div c>
                             <label for="validationServer02">Email</label>
-                            <input required name='correo' type="email" class="form-control" id="floatingInput"
+                            <input required name='destinatario_email' type="email" class="form-control" id="floatingInput"
                               placeholder="nombre@gmail.com">
                           </div>
                         </div>
