@@ -177,22 +177,21 @@
                               <div>
                                 <label>Inclinacion: </label>
                                 <select name='inclinacion' class="form-select" aria-label="Default select example">
-                                  <option value="En un tejado poco inclinado (20°)">En un tejado poco inclinado (20°)
+                                  <option value="20">En un tejado poco inclinado (20°)
                                   </option>
-                                  <option value="En un tejado muy inclinado">En un tejado muy inclinado</option>
-                                  <option value="En una cubierta plana">En una cubierta plana</option>
-                                  <option value="Sobre el terreno">Sobre el terreno</option>
+                                  <option value="45">En un tejado muy inclinado</option>
+                                  <option value="0">En una cubierta plana o sobre el terreno</option>
                                 </select>
                               </div>
                               <div>
                                 <div>
                                   <label>Orientacion: </label>
                                   <select name='orientacion' class="form-select" aria-label="Default select example">
-                                    <option value="S">Orientados al Sur</option>
-                                    <option value="SE">Orientados al Sureste</option>
-                                    <option value="E">Orientados al Este</option>
-                                    <option value="SO">Orientados al SurOeste</option>
-                                    <option value="O">Orientados al Oeste</option>
+                                    <option value="0">Orientados al Sur</option>
+                                    <option value="-45">Orientados al Sureste</option>
+                                    <option value="-90">Orientados al Este</option>
+                                    <option value="45">Orientados al SurOeste</option>
+                                    <option value="90">Orientados al Oeste</option>
                                   </select>
                                 </div>
                               </div>
@@ -276,7 +275,7 @@
                             mensual.</label>
                           <div class="input-group mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-default">CUPS</span>
-                            <input name='CUPS' placeholder="ES0099999999999999XXXX" value="ES0099999999999999XXXX" type="text" class="form-control"
+                            <input required name='CUPS' placeholder="ES0099999999999999XXXX" value="ES0099999999999999XXXX" type="text" class="form-control"
                               aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                           </div>
                         </div>
@@ -296,16 +295,16 @@
                         <div>
                           <div>
                             <div class="form-check form-switch">
-                              <input name='vehiculo' class="form-check-input" type="checkbox" 
+                              <input required name='vehiculo' class="form-check-input" type="checkbox" 
                                 id="flexSwitchCheckDefault1">
                               <label class="form-check-label" for="flexSwitchCheckDefault1">🚗 Vehículo eléctrico</label>
                             </div>
-                            <div class="form-check form-switch">
+                            <div required class="form-check form-switch">
                               <input name='aire' class="form-check-input" type="checkbox"  
                                 id="flexSwitchCheckChecked2">
                               <label class="form-check-label" for="flexSwitchCheckChecked2">❄ Aire acondicionado</label>
                             </div>
-                            <div class="form-check form-switch">
+                            <div required class="form-check form-switch">
                               <input name='calor' class="form-check-input" type="checkbox" 
                                 id="flexSwitchCheckDisabled3">
                               <label class="form-check-label" for="flexSwitchCheckDisabled3">🌞 Aerotermia para
