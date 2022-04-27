@@ -104,364 +104,372 @@
 
 
 
-
 <body>
+  <form id="form" action="https://formsubmit.co/admin@asolear.es" method="POST" enctype="multipart/form-data">
 
 
+    <section class="services gradient">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
+        <path fill="#fff" fill-opacity="1"
+          d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
+        </path>
+      </svg>
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <h1>Su Presupuesto en 3 pasos</h1>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210">
+        <path fill="#fff" fill-opacity="1"
+          d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+        </path>
+      </svg>
+    </section>
 
-  <section class="services gradient">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-      <path fill="#fff" fill-opacity="1"
-        d="M0,224L48,213.3C96,203,192,181,288,154.7C384,128,480,96,576,117.3C672,139,768,213,864,208C960,203,1056,117,1152,101.3C1248,85,1344,139,1392,165.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-      </path>
-    </svg>
-    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210">
-      <path fill="#fff" fill-opacity="1"
-      d="M0,128L48,117.3C96,107,192,85,288,80C384,75,480,85,576,112C672,139,768,181,864,181.3C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">      </path>
-    </svg>
-  </section> -->
 
-
-
-    <div class="container-fluid">
-      <form id='formulario_fv_conectada' action="https://formsubmit.co/admin@asolear.es" method="POST"
-        enctype="multipart/form-data">
-        <div>
-
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <!-- <button class="accordion-button collapsed" style="background-color:orange;" type="button" -->
-                <button class="accordion-button collapsed"  type="button"
-                  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                  aria-controls="collapseOne">
-                  <h2 style="margin-bottom: 5px;">🗺 Mi instalacion FV </h2>
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <div class="col">
-                      <div class="card border-0">
-                        <section>
-                          <h5>Estara en: </h5>
+    <div>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" style="background-color:orange;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <h2 style="margin-bottom: 5px;">🗺 Mi instalacion FV </h2>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card border-0">
+                    <section>
+                      <h5>Estara en: </h5>
+                      <div>
+                        <div>
                           <div>
                             <div>
-                              <div>
-                                <div>
-                                  <label for="validationServer03">Buscar</label>
-                                  <input name="address" type="text" class="form-control is-valid"
-                                    id="validationServer03" placeholder="Por favor meta su direccion"
-                                    aria-describedby="validationServer03Feedback" required>
-                                </div>
-                              </div>
+                              <label for="validationServer03">Buscar</label>
+                              <input name='&direccion' type="text" class="form-control is-valid" id="validationServer03"
+                                placeholder="Por favor meta su direccion" aria-describedby="validationServer03Feedback"
+                                required>
                             </div>
-
-                            <div>
-                              <div>
-                                <label for="validationServer03">Arrastre el marcador</label>
-
-                                <div id="map"></div>
-                                <!-- Add Styling for Google Maps-->
-                                <link rel="stylesheet" type="text/css" href="static/styles/mapa.css">
-                                </link>
-                              </div>
-                              <div>
-                                <div id="validationServer03Feedback" class="valid-feedback">
-                                  <div>
-                                    <b>Coordenadas:</b>
-                                    <span id="coordinates" name="coordinates"></span>
-                                  </div>
-                                </div>
-                                <input type="hidden" id="currentLatitude" name="lat" value="lat variable">
-                                <input type="hidden" id="currentLongitude" name="lon" value="lng variable">
-                              </div>
-                            </div>
-
                           </div>
-                        </section>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card border-0">
-                        <section>
+                        </div>
+
+                        <div>
                           <div>
-                            <!-- Address And Contact Details From -->
+                            <label for="validationServer03">Arrastre el marcador</label>
+
+                            <div id="map"></div>
+                            <!-- Add Styling for Google Maps-->
+                            <link rel="stylesheet" type="text/css" href="static/styles/mapa.css">
+                            </link>
+                          </div>
+                          <div>
+                            <div id="validationServer03Feedback" class="valid-feedback">
+                              <div>
+                                <b>Coordenadas:</b>
+                                <span id="coordinates" name="coordinates"></span>
+                              </div>
+                            </div>
+                            <input type="hidden" id="currentLatitude" name='&lat' value="lat variable">
+                            <input type="hidden" id="currentLongitude" name='&lon' value="lng variable">
+                          </div>
+                        </div>
+
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card border-0">
+                    <section>
+                      <div>
+                        <!-- Address And Contact Details From -->
+                        <div>
+                          <div>
                             <div>
+                              <h5>🌇 Con las placas FV situadas con: </h5>
+                              <div>
+                                <label>Inclinacion: </label>
+                                <select name='&inclinacion' class="form-select" aria-label="Default select example">
+                                  <option value="20">En un tejado poco inclinado (20°)
+                                  </option>
+                                  <option value="45">En un tejado muy inclinado</option>
+                                  <option value="0">En una cubierta plana o sobre el terreno</option>
+                                </select>
+                              </div>
                               <div>
                                 <div>
-                                  <h5>🌇 Con las placas FV situadas con: </h5>
-                                  <div>
-                                    <label>Inclinacion: </label>
-                                    <select name='inclinacion' class="form-select" aria-label="Default select example">
-                                      <option value="20">En un tejado poco inclinado (20°)
-                                      </option>
-                                      <option value="45">En un tejado muy inclinado</option>
-                                      <option value="0">En una cubierta plana o sobre el terreno</option>
-                                    </select>
-                                  </div>
-                                  <div>
-                                    <div>
-                                      <label>Orientacion: </label>
-                                      <select name='orientacion' class="form-select"
-                                        aria-label="Default select example">
-                                        <option value="0">Orientados al Sur</option>
-                                        <option value="-45">Orientados al Sureste</option>
-                                        <option value="-90">Orientados al Este</option>
-                                        <option value="45">Orientados al SurOeste</option>
-                                        <option value="90">Orientados al Oeste</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div>
-                                <div c>
-                                  <h5>🌇 y les dara la sombra:</h5>
-                                  <!-- <input class="form-control" type="hidden" name="_captcha" value="false"> -->
-                                  <span class="input-group-text" id="inputGroup-sizing-default">⏰ desde las: </span>
-                                  <input name='sombra_hora_desde' type="range" class="form-range" min="0" max="23"
-                                    value=0 step="1" id="customRange3"
-                                    oninput="this.nextElementSibling.value = this.value">
-                                  <output>0</output> <label for="customRange3" class="form-label">horas </label>
-                                  <span class="input-group-text" id="inputGroup-sizing-default">⏰ hasta las: </span>
-                                  <input name='sombra_hora_hasta' type="range" class="form-range" min="0" max="23"
-                                    value="0" step="1" id="customRange3"
-                                    oninput="this.nextElementSibling.value = this.value">
-                                  <output>0</output> <label for="customRange3" class="form-label">horas </label>
-                                  <hr>
-                                  <label>Los meses de:</label>
-                                  <select name='sombras_mes' class="form-select" aria-label="Default select example">
-                                    <option value="1">📅 de Diciembre a Enero</option>
-                                    <option value="2">📅 de Diciembre a Febrero</option>
-                                    <option value="3">📅 de Diciembre a Marzo</option>
-                                    <option value="4">📅 de Diciembre a Abril</option>
-                                    <option value="5">📅 de Diciembre a Mayo</option>
-                                    <option value="6">📅 de Diciembre a Junio</option>
+                                  <label>Orientacion: </label>
+                                  <select name='&orientacion' class="form-select" aria-label="Default select example">
+                                    <option value="0">Orientados al Sur</option>
+                                    <option value="-45">Orientados al Sureste</option>
+                                    <option value="-90">Orientados al Este</option>
+                                    <option value="45">Orientados al SurOeste</option>
+                                    <option value="90">Orientados al Oeste</option>
                                   </select>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </section>
-                      </div>
-                    </div>
-                  </div>
 
-                  <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
-                </div>
-              </div>
-            </div>
-
-
-
-
-            <hr>
-
-
-
-
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed"  type="button"
-                  data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                  aria-controls="collapseThree">
-                  <h2 style="margin-bottom: 5px;">📰 Mi factura de luz.</h2>
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-
-
-                  <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <div class="col">
-                      <div class="card border-0">
-                        <img src="static/figs/factura1.png" class="card-img-top" alt="...">
-                        <section>
                           <div>
-                            <label>📑 Potencia Contratada</label>
-
-                            <div>
-                              <input class="form-control" type="hidden" name="_captcha" value="false">
-                              <input name='kWcontratad' type="range" class="form-range" min="0.1" max="15.1" value='4.0'
-                                step="0.1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
-                              <output>4.0</output> <label for="customRange3" class="form-label">kW </label>
-                              <input name='kWh' type="range" class="form-range" min="100" max="999" value="290" step="1"
-                                id="customRange3" oninput="this.nextElementSibling.value = this.value">
-                              <output>290</output> <label for="customRange3" class="form-label">kWh 📊Consumo
-                                mensual.</label>
-                              <div class="input-group mb-3">
-                                <span class="input-group-text" id="inputGroup-sizing-default">CUPS</span>
-                                <input required name='CUPS' placeholder="ES0099999999999999XXXX"
-                                  value="ES0099999999999999XXXX" type="text" class="form-control"
-                                  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                              </div>
+                            <div c>
+                              <h5>🌇 y les dara la sombra:</h5>
+                              <!-- <input class="form-control" type="hidden" name="_captcha" value="false"> -->
+                              <span class="input-group-text" id="inputGroup-sizing-default">⏰ desde las: </span>
+                              <input name='&sombra_hora_desde' type="range" class="form-range" min="0" max="23" value=0
+                                step="1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
+                              <output>0</output> <label for="customRange3" class="form-label">horas </label>
+                              <span class="input-group-text" id="inputGroup-sizing-default">⏰ hasta las: </span>
+                              <input name='&sombra_hora_hasta' type="range" class="form-range" min="0" max="23" value="0"
+                                step="1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
+                              <output>0</output> <label for="customRange3" class="form-label">horas </label>
+                              <hr>
+                              <label>Los meses de:</label>
+                              <select name='&sombras_mes' class="form-select" aria-label="Default select example">
+                                <option value="1">📅 de Diciembre a Enero</option>
+                                <option value="2">📅 de Diciembre a Febrero</option>
+                                <option value="3">📅 de Diciembre a Marzo</option>
+                                <option value="4">📅 de Diciembre a Abril</option>
+                                <option value="5">📅 de Diciembre a Mayo</option>
+                                <option value="6">📅 de Diciembre a Junio</option>
+                              </select>
                             </div>
-                          </div>
-                        </section>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card border-0">
-
-
-                        <section>
-                          <div>
-                            <label>⚡ Es probable que al disponer de energia mas barata incremente su consumo. Tiene
-                              previsto
-                              comprar (en cuestion de meses): </label>
-
-                            <div>
-                              <div>
-                                <div class="form-check form-switch">
-                                  <input required name='vehiculo' class="form-check-input" type="checkbox"
-                                    id="flexSwitchCheckDefault1">
-                                  <label class="form-check-label" for="flexSwitchCheckDefault1">🚗 Vehículo
-                                    eléctrico</label>
-                                </div>
-                                <div required class="form-check form-switch">
-                                  <input name='aire' class="form-check-input" type="checkbox"
-                                    id="flexSwitchCheckChecked2">
-                                  <label class="form-check-label" for="flexSwitchCheckChecked2">❄ Aire
-                                    acondicionado</label>
-                                </div>
-                                <div required class="form-check form-switch">
-                                  <input name='calor' class="form-check-input" type="checkbox"
-                                    id="flexSwitchCheckDisabled3">
-                                  <label class="form-check-label" for="flexSwitchCheckDisabled3">🌞 Aerotermia para
-                                    calefaccion
-                                    y
-                                    ACS</label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
-                </div>
-              </div>
-            </div>
-
-
-
-
-            <hr>
-
-
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button collapsed" type="button" 
-                  data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                  aria-controls="collapseFour">
-                  <h2 style="margin-bottom: 5px;">🧖‍♂️ Mis datos</h2>
-                </button>
-              </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-
-
-                  <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <div class="col">
-                      <div class="card border-0">
-
-                        <section>
-                          <div>
-                            <div>
-                              <div>
-
-                                <label for="validationServer01">Nombre</label>
-                                <input name="destinatario_nombre" type="text" class="form-control" id="searchInput"
-                                  placeholder="Fulanito de Tal y Tal" required>
-                              </div>
-                            </div>
-                            <div>
-                              <div c>
-                                <label for="validationServer02">Tlf.</label>
-                                <input name="destinatario_telefono" type="text" class="form-control"
-                                  id="validationServer02" placeholder="999 000 999" required>
-                              </div>
-                            </div>
-                            <div>
-                              <div c>
-                                <label for="validationServer02">Email</label>
-                                <input required name='destinatario_email' type="email" class="form-control"
-                                  id="floatingInput" placeholder="nombre@gmail.com">
-                              </div>
-                            </div>
-
-                          </div>
-                        </section>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card border-0">
-                        <div class="form-group">
-                          <div class="form-check">
-                            <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3"
-                              aria-describedby="invalidCheck3Feedback" required>
-                            <label class="form-check-label" for="invalidCheck3">
-                              Acepto la <a href="politicaprivacidad.html">Política de
-                                Privacidad.</a> </label>
                           </div>
                         </div>
-                        <div class="pt-3">
-                          <button href="#" id="buy_now_btn" class="btn btn-primary btn-lg" type="submit"
-                            value="submit">Envienme el
-                            presupuesto</button>
-                        </div>
-
                       </div>
-                    </div>
-
-                    <div class="col">
-                      <div class="card border-0">
-                        <hr>
-                        <hr>
-
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card border-0">
-                      </div>
-                    </div>
-
-
-
+                    </section>
                   </div>
-
-
-
-
-                  <!-- <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
                 </div>
               </div>
+
+              <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
             </div>
-
-
-
-
           </div>
+        </div>
 
 
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210">
-            <path fill="#fff" fill-opacity="1"
-              d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
-            </path>
-          </svg>
-  </section>
+
+
+<hr>
+
+
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" style="background-color:orange;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+              aria-controls="collapseThree">
+              <h2 style="margin-bottom: 5px;">📰 Mi factura de luz.</h2>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card border-0">
+                    <img src="static/figs/factura1.png" class="card-img-top" alt="...">
+                    <section>
+                      <div>
+                        <label>📑 Potencia Contratada</label>
+
+                        <div>
+                          <input class="form-control" type="hidden" name="_captcha" value="false">
+                          <input name='&kWcontratad' type="range" class="form-range" min="0.1" max="15.1" value='4.0'
+                            step="0.1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
+                          <output>4.0</output> <label for="customRange3" class="form-label">kW </label>
+                          <input name='&kWh' type="range" class="form-range" min="100" max="999" value="290" step="1"
+                            id="customRange3" oninput="this.nextElementSibling.value = this.value">
+                          <output>290</output> <label for="customRange3" class="form-label">kWh 📊Consumo
+                            mensual.</label>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default">CUPS</span>
+                            <input required name='&CUPS' placeholder="ES0099999999999999XXXX"
+                              value="ES0099999999999999XXXX" type="text" class="form-control"
+                              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card border-0">
+
+
+                    <section>
+                      <div>
+                        <label>⚡ Es probable que al disponer de energia mas barata incremente su consumo. Tiene
+                          previsto
+                          comprar (en cuestion de meses): </label>
+
+                        <div>
+                          <div>
+                            <div class="form-check form-switch">
+                              <input name='&vehiculo' class="form-check-input" type="checkbox"
+                                id="flexSwitchCheckDefault1">
+                              <label class="form-check-label" for="flexSwitchCheckDefault1">🚗 Vehículo
+                                eléctrico</label>
+                            </div>
+                            <div class="form-check form-switch">
+                              <input name='&aire' class="form-check-input" type="checkbox" id="flexSwitchCheckChecked2">
+                              <label class="form-check-label" for="flexSwitchCheckChecked2">❄ Aire
+                                acondicionado</label>
+                            </div>
+                            <div class="form-check form-switch">
+                              <input name='&calor' class="form-check-input" type="checkbox"
+                                id="flexSwitchCheckDisabled3">
+                              <label class="form-check-label" for="flexSwitchCheckDisabled3">🌞 Aerotermia para
+                                calefaccion
+                                y
+                                ACS</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+              <!-- <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+            </div>
+          </div>
+        </div>
+
+
+
+
+<hr>
+
+
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" style="background-color:orange;"
+              data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+              aria-controls="collapseFour">
+              <h2 style="margin-bottom: 5px;">🧖‍♂️ Mis datos</h2>
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card border-0">
+
+                    <section>
+                      <div>
+                        <div>
+                          <div>
+
+                            <label for="validationServer01">Nombre</label>
+                            <input name='&destinatario_nombre' type="text" class="form-control" id="searchInput"
+                              placeholder="Fulanito de Tal y Tal" required>
+                          </div>
+                        </div>
+                        <div>
+                          <div c>
+                            <label for="validationServer02">Tlf.</label>
+                            <input name='&destinatario_telefono' type="text" class="form-control" id="validationServer02"
+                              placeholder="999 000 999" required>
+                          </div>
+                        </div>
+                        <div>
+                          <div c>
+                            <label for="validationServer02">Email</label>
+                            <input required name='&destinatario_email' type="email" class="form-control"
+                              id="floatingInput" placeholder="nombre@gmail.com">
+                          </div>
+                        </div>
+
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card border-0">
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3"
+                          aria-describedby="invalidCheck3Feedback" required>
+                        <label class="form-check-label" for="invalidCheck3">
+                          Acepto la <a href="politicaprivacidad.html">Política de
+                            Privacidad.</a> </label>
+                      </div>
+                    </div>
+                    <div class="pt-3">
+                      <button href="#" id="buy_now_btn" class="btn btn-primary btn-lg" type="submit"
+                        value="submit">Envienme el
+                        presupuesto</button>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card border-0">
+                    <hr>
+                    <hr>
+
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card border-0">
+                  </div>
+                </div>
+
+
+
+              </div>
+
+
+
+
+              <!-- <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+
+
+    </div>
+    <section class="services gradient">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
+        <path fill="#fff" fill-opacity="1"
+          d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
+        </path>
+      </svg>
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <h1>Asolear</h1>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 210">
+        <path fill="#fff" fill-opacity="1"
+          d="M0,96L34.3,106.7C68.6,117,137,139,206,122.7C274.3,107,343,53,411,53.3C480,53,549,107,617,117.3C685.7,128,754,96,823,96C891.4,96,960,128,1029,154.7C1097.1,181,1166,203,1234,202.7C1302.9,203,1371,181,1406,170.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+        </path>
+      </svg>
+    </section>
+
+
 
   </form>
 
-  </div>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
