@@ -151,7 +151,7 @@
                               <label for="validationServer03">Buscar</label>
                               <input name='&direccion' type="text" class="form-control is-valid" id="validationServer03"
                                 placeholder="Por favor meta su direccion" aria-describedby="validationServer03Feedback"
-                                required>
+                                required value="C. Moby Dick, 30, 29004 Málaga, Spain">
                             </div>
                           </div>
                         </div>
@@ -172,8 +172,8 @@
                                 <span id="coordinates" name="coordinates"></span>
                               </div>
                             </div>
-                            <input type="hidden" id="currentLatitude" name='&lat' value="lat variable">
-                            <input type="hidden" id="currentLongitude" name='&lon' value="lng variable">
+                            <input type="hidden" id="currentLatitude" name='&lat' value="36.66421645459196">
+                            <input type="hidden" id="currentLongitude" name='&lon' value="-4.458621906745909">
                           </div>
                         </div>
 
@@ -282,6 +282,8 @@
 
                         <div>
                           <input class="form-control" type="hidden" name="_captcha" value="false">
+                          <input class="form-control" type="hidden" name='&sector' value="HOGAR">
+                          <input class="form-control" type="hidden" name="&almacenamiento" value="false">
                           <input name='&kWcontratad' type="range" class="form-range" min="0.1" max="15.1" value='4.0'
                             step="0.1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
                           <output>4.0</output> <label for="customRange3" class="form-label">kW </label>
@@ -374,21 +376,21 @@
 
                             <label for="validationServer01">Nombre</label>
                             <input name='&destinatario_nombre' type="text" class="form-control" id="searchInput"
-                              placeholder="Fulanito de Tal y Tal" required>
+                              placeholder="Pepe Perez" required value="Pepe Perez">
                           </div>
                         </div>
                         <div>
                           <div c>
                             <label for="validationServer02">Tlf.</label>
                             <input name='&destinatario_telefono' type="text" class="form-control" id="validationServer02"
-                              placeholder="999 000 999" required>
+                              placeholder="999 000 999" required value="999 000 999" >
                           </div>
                         </div>
                         <div>
                           <div c>
                             <label for="validationServer02">Email</label>
                             <input required name='&destinatario_email' type="email" class="form-control"
-                              id="floatingInput" placeholder="nombre@gmail.com">
+                              id="floatingInput" placeholder="pepeperez@gmail.com" value="pepeperez@gmail.com">
                           </div>
                         </div>
 
