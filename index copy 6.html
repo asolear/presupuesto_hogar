@@ -106,12 +106,8 @@
 
 <body>
   <form id="form" action="https://formsubmit.co/admin@asolear.es" method="POST" enctype="multipart/form-data">
-    <!-- comandos -->
     <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_autoresponse" value="Muchas gracias, en breve le contactaremos.">
-    <input class="form-control" type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="New submission!">
-    <!--  -->
+    <input type="hidden" name="_autoresponse" value="your custom message">
     <section class="services gradient">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
         <path fill="#fff" fill-opacity="1"
@@ -153,7 +149,7 @@
                           <div>
                             <div>
                               <label for="validationServer03">Buscar</label>
-                              <input name='direccion' type="text" class="form-control is-valid" id="validationServer03"
+                              <input name='&direccion' type="text" class="form-control is-valid" id="validationServer03"
                                 placeholder="Por favor meta su direccion" aria-describedby="validationServer03Feedback"
                                 required value="C. Moby Dick, 30, 29004 Málaga, Spain">
                             </div>
@@ -176,8 +172,8 @@
                                 <span id="coordinates" name="coordinates"></span>
                               </div>
                             </div>
-                            <input type="hidden" id="currentLatitude" name='lat' value="36.66421645459196">
-                            <input type="hidden" id="currentLongitude" name='lon' value="-4.458621906745909">
+                            <input type="hidden" id="currentLatitude" name='&lat' value="36.66421645459196">
+                            <input type="hidden" id="currentLongitude" name='&lon' value="-4.458621906745909">
                           </div>
                         </div>
 
@@ -196,7 +192,7 @@
                               <h5>🌇 Con las placas FV situadas con: </h5>
                               <div>
                                 <label>Inclinacion: </label>
-                                <select name='inclinacion' class="form-select" aria-label="Default select example">
+                                <select name='&inclinacion' class="form-select" aria-label="Default select example">
                                   <option value="20">En un tejado poco inclinado (20°)
                                   </option>
                                   <option value="45">En un tejado muy inclinado</option>
@@ -206,7 +202,7 @@
                               <div>
                                 <div>
                                   <label>Orientacion: </label>
-                                  <select name='orientacion' class="form-select" aria-label="Default select example">
+                                  <select name='&orientacion' class="form-select" aria-label="Default select example">
                                     <option value="0">Orientados al Sur</option>
                                     <option value="-45">Orientados al Sureste</option>
                                     <option value="-90">Orientados al Este</option>
@@ -221,17 +217,18 @@
                           <div>
                             <div c>
                               <h5>🌇 y les dara la sombra:</h5>
+                              <!-- <input class="form-control" type="hidden" name="_captcha" value="false"> -->
                               <span class="input-group-text" id="inputGroup-sizing-default">⏰ desde las: </span>
-                              <input name='sombra_hora_desde' type="range" class="form-range" min="0" max="23" value=0
+                              <input name='&sombra_hora_desde' type="range" class="form-range" min="0" max="23" value=0
                                 step="1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
                               <output>0</output> <label for="customRange3" class="form-label">horas </label>
                               <span class="input-group-text" id="inputGroup-sizing-default">⏰ hasta las: </span>
-                              <input name='sombra_hora_hasta' type="range" class="form-range" min="0" max="23" value="0"
+                              <input name='&sombra_hora_hasta' type="range" class="form-range" min="0" max="23" value="0"
                                 step="1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
                               <output>0</output> <label for="customRange3" class="form-label">horas </label>
                               <hr>
                               <label>Los meses de:</label>
-                              <select name='sombras_mes' class="form-select" aria-label="Default select example">
+                              <select name='&sombras_mes' class="form-select" aria-label="Default select example">
                                 <option value="1">📅 de Diciembre a Enero</option>
                                 <option value="2">📅 de Diciembre a Febrero</option>
                                 <option value="3">📅 de Diciembre a Marzo</option>
@@ -256,7 +253,7 @@
 
 
 
-        <hr>
+<hr>
 
 
 
@@ -282,20 +279,21 @@
                     <section>
                       <div>
                         <label>📑 Potencia Contratada</label>
+
                         <div>
                           <input class="form-control" type="hidden" name="_captcha" value="false">
-                          <input class="form-control" type="hidden" name='sector' value="HOGAR">
-                          <input class="form-control" type="hidden" name='almacenamiento' value="false">
-                          <input name='kWcontratad' type="range" class="form-range" min="0.1" max="15.1" value='4.0'
+                          <input class="form-control" type="hidden" name='&sector' value="HOGAR">
+                          <input class="form-control" type="hidden" name="&almacenamiento" value="false">
+                          <input name='&kWcontratad' type="range" class="form-range" min="0.1" max="15.1" value='4.0'
                             step="0.1" id="customRange3" oninput="this.nextElementSibling.value = this.value">
                           <output>4.0</output> <label for="customRange3" class="form-label">kW </label>
-                          <input name='kWh' type="range" class="form-range" min="100" max="999" value="290" step="1"
+                          <input name='&kWh' type="range" class="form-range" min="100" max="999" value="290" step="1"
                             id="customRange3" oninput="this.nextElementSibling.value = this.value">
                           <output>290</output> <label for="customRange3" class="form-label">kWh 📊Consumo
                             mensual.</label>
                           <div class="input-group mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-default">CUPS</span>
-                            <input required name='CUPS' placeholder="ES0099999999999999XXXX"
+                            <input required name='&CUPS' placeholder="ES0099999999999999XXXX"
                               value="ES0099999999999999XXXX" type="text" class="form-control"
                               aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                           </div>
@@ -317,18 +315,18 @@
                         <div>
                           <div>
                             <div class="form-check form-switch">
-                              <input name='vehiculo' class="form-check-input" type="checkbox"
+                              <input name='&vehiculo' class="form-check-input" type="checkbox"
                                 id="flexSwitchCheckDefault1">
                               <label class="form-check-label" for="flexSwitchCheckDefault1">🚗 Vehículo
                                 eléctrico</label>
                             </div>
                             <div class="form-check form-switch">
-                              <input name='aire' class="form-check-input" type="checkbox" id="flexSwitchCheckChecked2">
+                              <input name='&aire' class="form-check-input" type="checkbox" id="flexSwitchCheckChecked2">
                               <label class="form-check-label" for="flexSwitchCheckChecked2">❄ Aire
                                 acondicionado</label>
                             </div>
                             <div class="form-check form-switch">
-                              <input name='calor' class="form-check-input" type="checkbox"
+                              <input name='&calor' class="form-check-input" type="checkbox"
                                 id="flexSwitchCheckDisabled3">
                               <label class="form-check-label" for="flexSwitchCheckDisabled3">🌞 Aerotermia para
                                 calefaccion
@@ -350,7 +348,7 @@
 
 
 
-        <hr>
+<hr>
 
 
 
@@ -377,22 +375,22 @@
                           <div>
 
                             <label for="validationServer01">Nombre</label>
-                            <input name='destinatario_nombre' type="text" class="form-control" id="searchInput"
+                            <input name='&destinatario_nombre' type="text" class="form-control" id="searchInput"
                               placeholder="Pepe Perez" required value="Pepe Perez">
                           </div>
                         </div>
                         <div>
                           <div c>
                             <label for="validationServer02">Tlf.</label>
-                            <input name='destinatario_telefono' type="text" class="form-control" id="validationServer02"
-                              placeholder="999 000 999" required value="999 000 999">
+                            <input name='&destinatario_telefono' type="text" class="form-control" id="validationServer02"
+                              placeholder="999 000 999" required value="999 000 999" >
                           </div>
                         </div>
                         <div>
                           <div c>
                             <label for="validationServer02">Email</label>
-                            <input required name='email' type="email" class="form-control" id="floatingInput"
-                              placeholder="pepeperez@gmail.com" value="pepeperez@gmail.com">
+                            <input required name='&destinatario_email' type="email" class="form-control"
+                              id="floatingInput" placeholder="pepeperez@gmail.com" value="pepeperez@gmail.com">
                           </div>
                         </div>
 
